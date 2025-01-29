@@ -1,0 +1,83 @@
+# Build artifacts
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+*.log
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/
+.idea/
+
+# Auto-generated files
+Generated\ Files/
+*.generated.*
+
+# NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Mac/Linux files
+.DS_Store
+*.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ASP.NET temporary files
+**/[Tt]emporary[Aa]sp[Nn]et[Ff]iles/
+
+# Azure Functions artifacts
+**/[Aa]zure[Aa]pp[Hh]ost[Ff]iles/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio
+.vscode/
+*.code-workspace
+.vs/
+.vscode/settings.json
+
+# JetBrains Rider specific files
+.idea/
+
+# Resharper folders
+_ReSharper*/
+resharper.xml
+
+# Other
+wwwroot/lib/
+wwwroot/node_modules/
+node_modules/
+
+# Local db
+*.mdf
+*.ldf
+*.db
+
+# Publish
+.publish/
+.publishprofiles/
+
+# Docker
+**/docker-compose*.*yml
+**/.dockerignore
+**/Dockerfile
