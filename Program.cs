@@ -5,6 +5,7 @@ using MediatR;
 using DONACIONES_VOLUNTARIAS.API.Interface;
 using DONACIONES_VOLUNTARIAS.API.Services.Queries.DonationQuerys;
 using DONACIONES_VOLUNTARIAS.API.Services.Queries.DonorQuerys;
+using DONACIONES_VOLUNTARIAS.API.Services.Queries.EventQuerys;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,7 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 // Configurar MediatR
 builder.Services.AddMediatR(typeof(GetDonationByIdQuery).Assembly);
 builder.Services.AddMediatR(typeof(GetDonorByIdQuery).Assembly);
+builder.Services.AddMediatR(typeof(GetEventByIdQuery).Assembly);
 
 // Configurar CORS
 builder.Services.AddCors(options =>
