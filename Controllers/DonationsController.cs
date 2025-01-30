@@ -2,6 +2,7 @@
 using MediatR;
 using DONACIONES_VOLUNTARIAS.API.Services.Commands.DonationCommands;
 using DONACIONES_VOLUNTARIAS.API.Services.Queries.DonationQuerys;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DONACIONES_VOLUNTARIAS.API.Controllers
 {
@@ -20,6 +21,7 @@ namespace DONACIONES_VOLUNTARIAS.API.Controllers
 
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAllDonations()
         {
             _logger.LogInformation("GetAllDonations called");
@@ -33,6 +35,7 @@ namespace DONACIONES_VOLUNTARIAS.API.Controllers
 
 
         [HttpGet("{id}")]
+        [Authorize]
         public async Task<IActionResult> GetDonationById(int id)
         {
             _logger.LogInformation("GetDonationById called with id: {Id}", id);
@@ -52,6 +55,7 @@ namespace DONACIONES_VOLUNTARIAS.API.Controllers
 
 
         [HttpPost]
+        [Authorize]
         public async Task<IActionResult> CreateDonation([FromBody] CreateDonationCommand command)
         {
             _logger.LogInformation("CreateDonation called");
@@ -64,6 +68,7 @@ namespace DONACIONES_VOLUNTARIAS.API.Controllers
 
 
         [HttpPut("{id}")]
+        [Authorize]
         public async Task<IActionResult> UpdateDonation(int id, [FromBody] UpdateDonationCommand command)
         {
             _logger.LogInformation("UpdateDonation called with id: {Id}", id);
@@ -80,6 +85,7 @@ namespace DONACIONES_VOLUNTARIAS.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize]
         public async Task<IActionResult> DeleteDonation(int id)
         {
             _logger.LogInformation("DeleteDonation called with id: {Id}", id);

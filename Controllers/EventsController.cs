@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MediatR;
-using global::DONACIONES_VOLUNTARIAS.API.Services.Commands.EventCommands;
-using global::DONACIONES_VOLUNTARIAS.API.Services.Queries.EventQuerys;
-namespace DONACIONES_VOLUNTARIAS.API.Controllers.EventController;
+using DONACIONES_VOLUNTARIAS.API.Services.Commands.EventCommands;
+using DONACIONES_VOLUNTARIAS.API.Services.Queries.EventQuerys;
+namespace DONACIONES_VOLUNTARIAS.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
