@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using DONACIONES_VOLUNTARIAS.API.Persistence.Contexts;
 using Microsoft.OpenApi.Models;
 using MediatR;
-using AutoMapper;
-using DONACIONES_VOLUNTARIAS.API.Services.Queries;
 using DONACIONES_VOLUNTARIAS.API.Interface;
+using DONACIONES_VOLUNTARIAS.API.Services.Queries.DonationQuerys;
+using DONACIONES_VOLUNTARIAS.API.Services.Queries.DonorQuerys;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,6 +28,7 @@ builder.Services.AddAutoMapper(typeof(Program).Assembly);
 
 // Configurar MediatR
 builder.Services.AddMediatR(typeof(GetDonationByIdQuery).Assembly);
+builder.Services.AddMediatR(typeof(GetDonorByIdQuery).Assembly);
 
 // Configurar CORS
 builder.Services.AddCors(options =>

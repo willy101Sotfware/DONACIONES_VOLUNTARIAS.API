@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace DONACIONES_VOLUNTARIAS.API.Services.Queries
+namespace DONACIONES_VOLUNTARIAS.API.Services.Queries.DonationQuerys
 {
     public class GetDonationByIdQuery : IRequest<DonationDTO?>
     {
